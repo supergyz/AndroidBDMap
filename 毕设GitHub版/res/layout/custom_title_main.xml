@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/top"
+    	android:layout_width="fill_parent"
+    	android:layout_gravity="center_vertical"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	android:background="@color/title_green"
+    	android:layout_height="wrap_content">
+
+        <Button android:id="@+id/back1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:gravity="center"
+        	android:layout_centerVertical="true"
+        	android:layout_alignParentLeft="true"
+        	android:textSize="12sp"
+        	android:textStyle="bold"
+        	android:background="@drawable/search_btn_background"
+        	android:text="返回"/>
+
+        <RelativeLayout android:id="@+id/rlSearchFrameDelete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        	android:layout_centerVertical="true"
+			android:gravity="center_vertical"
+			android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/back1">
+            	
+            	<LinearLayout 
+            	    android:id="@+id/useless"
+            	    android:orientation="horizontal"
+            	    android:layout_width="0dp"
+            		android:layout_height="0dp">
+            	</LinearLayout>
+            
+		    	<EditText android:id="@+id/etSearch1"
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+					android:singleLine="true"
+		        	android:background="@drawable/search_frame"
+		        	android:layout_marginRight="10dp"
+		        	android:paddingLeft="32dp"
+		        	android:textSize="12sp"
+		        	android:hint="搜索目的地..."/>
+		    	
+		    	<ImageView android:id="@+id/ivDeleteText"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentRight="true"
+		    	    android:src="@drawable/delete"
+		    	    android:layout_centerInParent="true"
+		    	    android:paddingRight="20dp"
+		    	    android:visibility="gone"/>
+            
+        </RelativeLayout>
+        
+    	
+    </RelativeLayout>

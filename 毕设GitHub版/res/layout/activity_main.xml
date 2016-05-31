@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    
+    <com.baidu.mapapi.map.MapView  
+    android:id="@+id/bmapView"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent"  
+    android:clickable="true" />
+    
+    <Button
+        android:id="@+id/btn_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="8px"
+        android:text="我的位置"
+        >
+    </Button>
+    
+    
+    <Button
+        android:id="@+id/btn_normal_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_toRightOf="@id/btn_location"
+        android:text="普通地图"
+        >
+    </Button>
+    
+    <Button
+        android:id="@+id/btn_weixing_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_toRightOf="@id/btn_normal_map"
+        android:text="卫星地图"
+        >
+    </Button>
+    
+    <Button
+        android:id="@+id/btn_traffic_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_toRightOf="@id/btn_weixing_map"
+        android:text="交通地图"
+        >
+    </Button>
+    
+    
+    
+        <RelativeLayout
+        android:id="@+id/id_marker_info"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentBottom="true"
+        android:background="#CC4e5a6b"
+        android:clickable="true" >
+		
+       <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+        <Button 
+            android:id="@+id/navi"
+            android:layout_width="60dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:text="到这去...先点击定位按钮吧"/>
+            
+        <ImageView
+            android:id="@+id/info_img"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:alpha="1.0"
+            android:background="@drawable/map_image_border_white"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/map_iv" />
+
+
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_map_bottom" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/info_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="老米家泡馍小炒"
+                    android:textColor="#FFF5EB"
+                    android:textStyle="bold" 
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/info_distance"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="北京朝阳区北三环北京化工大学北京朝阳区北三环北京化工大学"
+                    android:textColor="#FFF5EB" 
+                    android:textSize="11dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical" >
+				
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                 	android:orientation="horizontal">   
+                    
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="总车位："
+                    android:textSize="14dp"
+                    android:textColor="#FFF5EB" />
+                
+               	 	<TextView
+                    android:id="@+id/info_zcw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="null"
+                    android:textSize="14dp"
+                    android:textColor="#FFF5EB" />
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                 	android:orientation="horizontal"
+                 	android:layout_marginTop="9dp">   
+                    
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="空车位："
+                    android:textSize="14dp"
+                    android:textColor="#FFF5EB" />
+                
+                	<TextView
+                    android:id="@+id/info_kcw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="652"
+                    android:textColor="#00FF7F" 
+                    android:textSize="18dp"/>
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    
+</RelativeLayout>
